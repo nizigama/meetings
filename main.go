@@ -22,8 +22,17 @@ func main() {
 
 	roomsWithMeetings := assignMeetingsToRooms(meets)
 
-	fmt.Printf("%+v\n\n\n\n", meets)
-	fmt.Printf("%+v\n", roomsWithMeetings)
+	for i, m := range meets {
+		fmt.Printf("Meeting %d: \n\tstart: %d\tend: %d\n", i+1, m.StartTime, m.EndTime)
+	}
+
+	fmt.Println()
+	fmt.Println()
+	fmt.Println()
+
+	for i, room := range roomsWithMeetings {
+		fmt.Printf("Room %d: %v\n", i+1, room)
+	}
 
 }
 
